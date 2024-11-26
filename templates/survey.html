@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<p>Image {{ index + 1 }} of {{ total }}</p>
+<img src="{{ url_for('static', filename='images/' + image) }}" alt="Survey Image" style="max-width:100%;">
+<form method="POST">
+    <button name="response" value="yes">Yes</button>
+    <button name="response" value="no">No</button>
+</form>
+{% endblock %}
